@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NILAI MAHASISWA</title>
+</head>
+<body>
+  <h2>List Nilai Mahasiswa</h2>
+  <table style="width: 100%" border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NIM</th>
+        <th>NAMA</th>
+        <th>ALAMAT</th>
+        <th>JK</th>
+        <th>JURUSAN</th>
+        <th>MATKUL</th>
+        <th>KELAS</th>
+        <th>NILAI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <th:block th:each="nilai : ${daftar_pengguna}">
+        <tr>
+          <td>[[${nilai.getId()}]]</td>
+          <td>[[${nilai.getNimMahasiswa()}]]</td>
+          <td>[[${nilai.getNamaMahasiswa()}]]</td>
+          <td>[[${nilai.getAlamat()}]]</td>
+          <td>[[${nilai.getJenisKelamin()}]]</td>
+          <td>[[${nilai.getJurusan()}]]</td>
+          <td>[[${nilai.getMatkul()}]]</td>
+          <td>[[${nilai.getKelas()}]]</td>
+          <td>[[${nilai.getNilai()}]]</td>
+        </tr>
+      </th:block>
+    </tbody>
+  </table>
+</body>
+</html>

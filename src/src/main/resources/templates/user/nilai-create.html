@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INPUT NILAI</title>
+</head>
+<body>
+  <h1>Input Niai Mahasiswa</h1>
+  <form th:action="@{/nilai/store}" method="post" th:object="${pengguna}"> 
+    <table width="600px">
+      <tr>
+        <td width="150">NIM</td>
+        <td>
+          <input type="text" th:field="*{namaMahasiswa}" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="150">NAMA</td>
+        <td>
+          <input type="text" th:field="*{namaMahasiswa}" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="150">ALAMAT</td>
+        <td>
+          <input type="text" th:field="*{alamat}" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="150">JK</td>
+        <td>
+          <input type="text" th:field="*{jenisKelamin}" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="150">JURUSAN</td>
+        <td>
+          <input type="text" th:field="*{jurusan}" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="150">MATKUL</td>
+        <td>
+          <input type="text" th:field="*{matkul}" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="150">KELAS</td>
+        <td>
+          <input type="text" th:field="*{kelas}" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="150">NILAI</td>
+        <td>
+          <input type="text" th:field="*{nilai}" required>
+        </td>
+      </tr>
+
+       
+        <td>
+          <button type="submit">
+            Simpan
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
